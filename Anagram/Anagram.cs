@@ -36,13 +36,14 @@ namespace Anagram
     string output = "";
     if (anagramWord == sortedWord)
       {
-      output += _testOutput+ " IS AN anagram (to end game ENTER: stop)";
+      output += _testOutput+ " IS AN anagram (to end game ENTER: stopNow)";
     }
     else
     {
-      output += _testOutput+ " IS NOT an Anagram (to end game ENTER: stop)";
+      output += _testOutput+ " IS NOT an Anagram (to end game ENTER: stopNow)";
     }
     return output;
+}
 }
 
 class AnagramApp
@@ -54,15 +55,14 @@ class AnagramApp
     string inputWord = "";
     string finalResult = "";
       do {
-        Console.WriteLine("Please Enter Anagram of first word (to end game ENTER: stop)");
+        Console.WriteLine("Please Enter Anagram of first word (to end game ENTER: stopNow");
         inputWord = Console.ReadLine();
       testWord word = new testWord(inputWord, inputW);
       finalResult = word.test(inputWord, inputW);
       Console.WriteLine(finalResult);
- } while (inputWord != "stop");
+ } while (inputWord != "stopNow");
 
 
     }
   }
-}
 }
